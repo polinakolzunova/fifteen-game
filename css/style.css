@@ -1,0 +1,623 @@
+/*====================== Total =====================*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#app {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #000;
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*====================== Aside =====================*/
+
+.aside {
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 10px rgba(70, 70, 70, 0.6);
+}
+
+.aside header {
+    padding: 10px 15px;
+}
+
+.aside header h1 {
+    width: 144px;
+    padding: 8px 0 8px 8px;
+    margin: 20px 0 0 50px;
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 55px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    transform-origin: left;
+    transform: scaleX(1.3);
+    border: 4px solid #000;
+    box-shadow: 5px 5px 10px rgba(64, 64, 64, 0.71);
+    transition: all 0.3s linear;
+    cursor: default;
+}
+
+.aside header h1:hover {
+    text-align: right;
+}
+
+.aside .main {
+    flex-grow: 1;
+}
+
+.aside h3 {
+    top: -7px;
+    transform: scaleY(0.9);
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin: 15px 20px 10px;
+    cursor: default;
+}
+
+.aside #start {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 15px 0;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.aside .radio-field {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.aside input {
+    display: none;
+}
+
+.aside label {
+    display: inline-block;
+    transform: scaleY(1.3);
+    padding: 3px 6px;
+    margin: 0 3px 3px 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.aside footer {
+    padding: 10px 15px;
+    cursor: default;
+}
+
+.aside footer a {
+    text-decoration: none;
+}
+
+.aside .radio-field.image-field {
+    display: none;
+    width: 100%;
+}
+
+.aside .radio-field.image-field img {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #000;
+}
+
+/*====================== Content =====================*/
+
+.content {
+    flex-grow: 1;
+    position: relative;
+    box-shadow: inset 5px 0 15px rgba(64, 64, 64, 0.71);
+}
+
+.content #about-btn {
+    position: absolute;
+    z-index: 1000;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px rgba(45, 45, 45, 0.71);
+    cursor: pointer;
+}
+
+.content .screen {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.screen .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px;
+    background-color: #fff;
+    box-shadow: 7px 7px 10px rgba(96, 96, 96, 0.67);
+}
+
+.content .screen-game {
+    display: block;
+}
+
+.screen-game .counters {
+    text-align: center;
+    font-size: 1.1em;
+    cursor: default;
+}
+
+.screen-game .counters > div {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 5px;
+    padding: 5px 0;
+}
+
+.screen-game .counters span {
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.normal .screen-game .counters span.val {
+    background-color: #fff;
+    color: #000;
+}
+
+.content .screen-about {
+    background-color: rgba(68, 68, 68, 0.4);
+}
+
+.screen-about .inner {
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: none;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.screen-about #close-btn {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    content: "X";
+    cursor: pointer;
+    color: #fff;
+}
+
+.screen-about h2 {
+  width: 144px;
+  padding: 8px 0 8px 8px;
+  margin: 20px 0 20px 190px;
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 60px;
+  text-align: left;
+  line-height: 55px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  transform-origin: left;
+  transform: scaleX(1.3);
+  border: 4px solid #000;
+  box-shadow: 5px 5px 10px rgba(64, 64, 64, 0.71);
+  transition: all 0.3s linear;
+  cursor: default;
+}
+
+.screen-about p {
+    margin: 10px 0 0;
+}
+
+.screen-input-name form {
+    text-align: center;
+}
+
+.screen-input-name input {
+    display: block;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 7px 15px;
+    margin: 10px 0;
+    width: 350px;
+}
+
+/*========== Box ==========*/
+
+.perspective {
+    perspective: 400px;
+    position: relative;
+    top: -20px;
+}
+
+#box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 440px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    transform: rotateX(20deg);
+    box-shadow: 0 5px 10px rgba(68, 68, 68, 0.61);
+}
+
+#box .elem {
+    flex: 0 0 100px;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+    font: bold 24px/100px Tahoma, sans;
+    border-radius: 5px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#box .elem:hover {
+    opacity: 0.8;
+}
+
+#box.image .elem {
+    border-radius: 0;
+    flex-basis: 110px;
+    height: 110px;
+    margin: 0;
+    outline: 1px solid black;
+}
+
+/*========== Result screen ==========*/
+
+.screen-results .inner {
+    height: 90%;
+    min-width: 500px;
+}
+
+.screen-results h2 {
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+
+}
+
+table {
+    overflow-y: auto;
+    display: block;
+    margin-bottom: 2vh;
+    padding: 10px 15px;
+    border-spacing: 0;
+}
+
+tr > th:nth-child(1),
+tr > td:nth-child(1) {
+    width: 10%;
+    text-align: left;
+}
+
+tr > th:nth-child(2),
+tr > td:nth-child(2) {
+    width: 200px;
+    text-align: left;
+}
+
+tr > td:nth-child(3) {
+    width: 200px;
+    text-align: center;
+}
+
+td, th {
+    line-height: 2;
+}
+
+/*====================== Types color themes =====================*/
+
+.monochrome .btn {
+    border-color: #000;
+    background-color: #fff;
+}
+
+.monochrome .btn:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: black;
+}
+
+.monochrome .aside {
+    background-color: #eee;
+}
+
+.monochrome .aside header h1 {
+    color: white;
+    background-color: #444;
+    border-color: #444;
+}
+
+.monochrome .aside #start {
+    background-color: #000;
+    color: #fff;
+}
+
+.monochrome .aside #start:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.monochrome .aside input:checked ~ label {
+    background-color: #000;
+    color: #fff;
+}
+
+.monochrome .aside label:hover {
+    background-color: rgba(68, 68, 68, 0.5);
+}
+
+.monochrome .aside footer,
+.monochrome .aside footer a {
+    color: #444;
+}
+
+.monochrome .aside .radio-field.image-field img {
+    border-color: #000;
+}
+
+.monochrome .content {
+    background-color: #6e6e6e;
+}
+
+.monochrome .content #about-btn {
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.51);
+}
+
+.monochrome .content #about-btn:hover {
+    background-color: #000;
+}
+
+.monochrome #box {
+    background-color: #333;
+}
+
+.monochrome #box .elem {
+    background-color: rgba(245, 245, 245, 0.64);
+}
+
+.monochrome .screen-results h2 {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+.monochrome tr.active {
+    background-color: #eee;
+}
+
+.monochrome tbody tr:hover {
+    background-color: rgba(68, 68, 68, 0.3);
+}
+
+
+
+.normal .aside {
+    background-color: #bedaff;
+}
+
+.normal .content {
+    background-color: #4d5463;
+}
+
+.normal #box {
+    background-color: #fff;
+    background-image: repeating-linear-gradient(135deg, transparent 0px, transparent 10px, #4d5463 10px, #4d5463 11px);
+}
+
+.normal #box .elem {
+    background-color: rgba(125, 148, 206, 0.7);
+}
+
+.normal .aside header h1 {
+    color: #4d5463;
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+    background-image: repeating-linear-gradient(130deg, transparent 0px, transparent 10px, #4d5463 10px, #4d5463 12px);
+}
+
+.normal .btn {
+    border-color: #d6c11e;
+    background-color: #fff;
+}
+
+.normal .btn:hover {
+    background-color: #d6c11e;
+    color: #fff;
+    border-color: #d6c11e;
+}
+
+.normal .aside #start {
+    background-color: #d6c11e;
+    color: #fff;
+}
+
+.normal .aside #start:hover {
+    background-color: #fff;
+    color: #d6c11e;
+}
+
+.normal .aside input:checked ~ label {
+    background-color: #d6c11e;
+    color: #fff;
+}
+
+.normal .aside label:hover {
+    background-color: rgba(214, 193, 30, 0.6);
+    opacity: 0.8;
+}
+
+.normal .content #about-btn {
+    background-color: #d6c11e;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.normal .content #about-btn:hover {
+    background-color: #d6c11e;
+}
+
+.normal .aside footer,
+.normal .aside footer a {
+    color: #444;
+}
+
+.normal .screen-results h2 {
+    color: #4d5463;
+    border-bottom-color: #4d5463;
+}
+
+.normal .aside .radio-field.image-field img {
+    border-color: #4d5463;
+}
+
+.normal tr.active {
+    background-color: #d6c11e;
+}
+
+.normal tbody tr:hover {
+    background-color: #4d5463;
+    opacity: 0.7;
+}
+
+
+
+.rainbow .aside {
+    background-color: #3aa444;
+}
+
+.rainbow .content {
+    background-color: #7effe5;
+}
+
+.rainbow #box {
+    background-image: linear-gradient(135deg,
+        rgb(255,0,0),rgb(255,170,0),rgb(170,255,0),rgb(0,255,0),
+        rgb(0,255,170),rgb(0,170,255),rgb(0,0,255),rgb(170,0,255));
+}
+
+.rainbow #box .elem {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.rainbow .aside header h1 {
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background-image: linear-gradient(135deg,
+        rgb(255,0,0),rgb(255,170,0),rgb(170,255,0),rgb(0,255,0),
+        rgb(0,255,170),rgb(0,170,255),rgb(0,0,255),rgb(170,0,255));
+}
+
+.rainbow .btn {
+    border-color: #d6c11e;
+    background-color: #fff;
+}
+
+.rainbow .btn:hover {
+    background-color: #d6c11e;
+    color: #fff;
+    border-color: #d6c11e;
+}
+
+.rainbow .aside #start {
+    background-color: #2f6a33;
+    color: #fff;
+}
+
+.rainbow .aside #start:hover {
+    background-color: #fff;
+    color: #2f6a33;
+}
+
+.rainbow .aside input:checked ~ label {
+    background-color: #2f6a33;
+    color: #fff;
+}
+
+.rainbow .aside label:hover {
+    background-color: rgba(47, 106, 51, 0.6);
+    opacity: 0.8;
+}
+
+.rainbow .content #about-btn {
+    background-color: #2f6a33;
+    color: #fff;
+}
+
+.rainbow .content #about-btn:hover {
+    background-color: #4aac4f;
+}
+
+.rainbow .aside footer,
+.rainbow .aside footer a {
+    color: #444;
+}
+
+.rainbow .counters .text,
+.rainbow .counters .val {
+    color: #4d5463;
+}
+.rainbow .counters .val{
+    font-weight: bold;
+}
+
+.rainbow .screen-results h2 {
+    color: #e3ce1e;
+    border-bottom-color: #e3ce1e;
+}
+
+.rainbow .aside .radio-field.image-field img {
+    border-color: #e3ce1e;
+}
+
+.rainbow tr.active {
+    background-image: linear-gradient(135deg,
+        rgb(255,0,0),rgb(255,170,0),rgb(170,255,0),rgb(0,255,0),
+        rgb(0,255,170),rgb(0,170,255),rgb(0,0,255),rgb(170,0,255));
+}
+
+.rainbow tbody tr:hover {
+    background-color: #e3ce1e;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Пятнашки</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/myScript.js"></script>
+</head>
+<body>
+<div id="app" class="monochrome">
+    <div class="aside">
+        <header>
+            <h1>Пятнашки</h1>
+        </header>
+        <div class="main">
+            <button type="button" id="start">Начать игру</button>
+            <h3>Оформление пятнашек</h3>
+            <div class="radio-field ">
+                <p>
+                    <input type="radio" name="type" value="numbers" id="r-numbers" checked>
+                    <label for="r-numbers">Числа</label>
+                </p>
+                <p>
+                    <input type="radio" name="type" value="image" id="r-image">
+                    <label for="r-image">Изображение</label>
+                </p>
+            </div>
+            <h3>Цветовая тема</h3>
+            <div class="radio-field">
+                <p>
+                    <input type="radio" name="color" value="monochrome" id="r-dark" checked>
+                    <label for="r-dark">Монохромная</label>
+                </p>
+                <p>
+                    <input type="radio" name="color" value="normal" id="r-light">
+                    <label for="r-light">Обычная</label>
+                </p>
+                <p>
+                    <input type="radio" name="color" value="rainbow" id="r-rainbow">
+                    <label for="r-rainbow">Радужная</label>
+                </p>
+            </div>
+            <div class="radio-field image-field">
+                <img src="/img/bg.jpg" alt="image" height=150>
+            </div>
+        </div>
+        <footer>
+            &copy; <a href="#">kolzunovapolina</a>
+        </footer>
+    </div>
+    <div class="content">
+        <div class="screen screen-game">
+            <div id="about-btn" title="О программе">?</div>
+            <div class="counters">
+                <div class="timer">
+                    <span class="text">Времени прошло</span><span class="val">00:00</span>
+                </div>
+                <div class="throws">
+                    <span class="text">Количество шагов</span><span class="val">0</span>
+                </div>
+            </div>
+            <div class="perspective">
+                <div id="box">
+                    <div class="elem">1</div>
+                    <div class="elem">2</div>
+                    <div class="elem">3</div>
+                    <div class="elem">4</div>
+                    <div class="elem">5</div>
+                    <div class="elem">6</div>
+                    <div class="elem">7</div>
+                    <div class="elem">8</div>
+                    <div class="elem">9</div>
+                    <div class="elem">10</div>
+                    <div class="elem">11</div>
+                    <div class="elem">12</div>
+                    <div class="elem">13</div>
+                    <div class="elem">14</div>
+                    <div class="elem">15</div>
+                </div>
+            </div>
+        </div>
+        <div class="screen screen-about">
+            <div class="inner">
+                <div id="close-btn">X</div>
+                <h2>Пятнашки</h2>
+                <p>Логическая игра "Пятнашки" v1.0</p>
+                <p>Разработал: Колзунова П.</p>
+                <p>&copy; <a href="#">kolzunovapolina</a></p>
+            </div>
+        </div>
+        <div class="screen screen-input-name">
+            <div class="inner">
+                <form id="name-form" action="/">
+                    <h3>Сохранить результат?</h3>
+                    <input type="text" id="name" placeholder="Введите свое имя для сохранения результата" required>
+                    <button id="cancel-result" type="button" class="btn">Отмена</button>
+                    <button id="save-result" class="btn">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div class="screen screen-results">
+            <div class="inner">
+                <h2>Результаты</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Имя</th>
+                        <th>Количество ходов</th>
+                        <th>Время</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Konstantin</td>
+                        <td>100</td>
+                        <td>02:12</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="start-again" class="btn">Начать заново</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
