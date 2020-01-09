@@ -1,2 +1,2 @@
-# fidteen-game
+# fifteen-game
 little funny game
